@@ -101,6 +101,25 @@ function Initialize-ProjectFolders {
         [string]$ProjectRoot
     )
 
+    if (-not [System.IO.Path]::IsPathRooted($Config.paths.outputSiteDir)) {
+    $Config.paths.outputSiteDir = Join-Path $ProjectRoot $Config.paths.outputSiteDir
+    }
+        if (-not [System.IO.Path]::IsPathRooted($Config.paths.outputTempDir)) {
+        $Config.paths.outputTempDir = Join-Path $ProjectRoot $Config.paths.outputTempDir
+    }
+    if (-not [System.IO.Path]::IsPathRooted($Config.paths.outputLogsDir)) {
+        $Config.paths.outputLogsDir = Join-Path $ProjectRoot $Config.paths.outputLogsDir
+    }
+    if (-not [System.IO.Path]::IsPathRooted($Config.paths.inputFile)) {
+        $Config.paths.inputFile = Join-Path $ProjectRoot $Config.paths.inputFile
+    }
+    if (-not [System.IO.Path]::IsPathRooted($Config.paths.indexTemplate)) {
+        $Config.paths.indexTemplate = Join-Path $ProjectRoot $Config.paths.indexTemplate
+    }
+    if ($Config.paths.overridesFile -and -not [System.IO.Path]::IsPathRooted($Config.paths.overridesFile)) {
+        $Config.paths.overridesFile = Join-Path $ProjectRoot $Config.paths.overridesFile
+    }
+
     Ensure-Directory $Config.paths.outputSiteDir
     Ensure-Directory $Config.paths.outputTempDir
     Ensure-Directory $Config.paths.outputLogsDir

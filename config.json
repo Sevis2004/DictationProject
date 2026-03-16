@@ -3,7 +3,7 @@
     "inputFile": "input/DICTATIONS.txt",
     "overridesFile": "input/overrides.txt",
     "outputSiteDir": "output/site",
-    "outputTempDir": "output/temp",
+    "outputTempDir": "Output/Temp",
     "outputLogsDir": "output/logs",
     "indexTemplate": "templates/index.template.html"
   },
