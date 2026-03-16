@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{SITE_TITLE}}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.5;
+    }
+    h1 {
+      margin-bottom: 24px;
+    }
+    .dictation {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .dictation h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+    audio {
+      width: 100%;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>{{SITE_TITLE}}</h1>
+  <div id="dictations">Загрузка...</div>
+
+  <script>
+    async function loadDictations() {
+      const container = document.getElementById('dictations');
+
+      try {
+        const response = await fetch('dictations.json', { cache: 'no-store' });
+        if (!response.ok) {
+          throw new Error('Не удалось загрузить dictations.json');
+        }
+
+        const items = await response.json();
+
+        if (!Array.isArray(items) || items.length === 0) {
+          container.innerHTML = '<p>Список диктантов пуст.</p>';
+          return;
+        }
+
+        container.innerHTML = items.map(item => `
+          <div class="dictation">
+            <h2>${item.title}</h2>
+            <audio controls preload="none">
+              <source src="${item.audio}" type="audio/mpeg">
+              Ваш браузер не поддерживает воспроизведение аудио.
+            </audio>
+          </div>
+        `).join('');
+      } catch (error) {
+        container.innerHTML = `<p>Ошибка загрузки списка диктантов: ${error.message}</p>`;
+      }
+    }
+
+    loadDictations();
+  </script>
+</body>
+</html>

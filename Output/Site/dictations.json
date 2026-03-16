@@ -1,0 +1,27 @@
+﻿[
+    {
+        "title":  "Осенью",
+        "slug":  "osen",
+        "audio":  "osen_full.mp3"
+    },
+    {
+        "title":  "Ночлег в лесу",
+        "slug":  "nochleg",
+        "audio":  "nochleg_full.mp3"
+    },
+    {
+        "title":  "Лобное место",
+        "slug":  "lobnoe_mesto",
+        "audio":  "lobnoe_mesto_full.mp3"
+    },
+    {
+        "title":  "ИТОГОВЫЙ ДИКТАНТ ЗА 1 ЧЕТВЕРТЬ",
+        "slug":  "itog-1",
+        "audio":  "itog-1_full.mp3"
+    },
+    {
+        "title":  "КОНТРОЛЬНЫЙ ДИКТАНТ ПО ТЕМЕ \"СЛОВООБРАЗОВАНИЕ. ОРФОГРАФИЯ\"",
+        "slug":  "control-slovo-orf",
+        "audio":  "control-slovo-orf_full.mp3"
+    }
+]

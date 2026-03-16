@@ -1,0 +1,17 @@
+# cache
+cache/
+
+# временные файлы генерации
+output/temp/
+output/logs/
+
+# системные
+.DS_Store
+Thumbs.db
+
+# временные файлы
+*.tmp
+*.log
+
+# PowerShell history
+*.pshistory

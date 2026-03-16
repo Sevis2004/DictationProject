@@ -1,0 +1,47 @@
+{
+  "paths": {
+    "inputFile": "C:\\Users\\sevis\\Downloads\\DictationProject\\input\\DICTATIONS.txt",
+    "overridesFile": "C:\\Users\\sevis\\Downloads\\DictationProject\\input\\overrides.txt",
+    "outputSiteDir": "C:\\Users\\sevis\\Downloads\\DictationProject\\output\\site",
+    "outputTempDir": "C:\\Users\\sevis\\Downloads\\DictationProject\\output\\temp",
+    "outputLogsDir": "C:\\Users\\sevis\\Downloads\\DictationProject\\output\\logs",
+    "indexTemplate": "C:\\Users\\sevis\\Downloads\\DictationProject\\templates\\index.template.html"
+  },
+  "defaults": {
+    "voice": "ermil",
+    "speed": 1.0,
+    "format": "mp3",
+    "publish": true
+  },
+  "pauses": {
+    "part1": {
+      "titleMs": 1200,
+      "shortMs": 1000,
+      "mediumMs": 1500,
+      "longMs": 2200,
+      "paragraphMs": 2500
+    },
+    "part2": {
+      "beforeSplitMs": 5500,
+      "shortMs": 7500,
+      "mediumMs": 9000,
+      "longMs": 10500,
+      "sentenceEndMs": 11500
+    }
+  },
+  "tts": {
+    "endpoint": "https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize",
+    "format": "mp3",
+    "apiKey": ""
+  },
+  "site": {
+    "title": "Диктанты"
+  },
+  "publish": {
+    "enabled": true,
+    "method": "aws-cli",
+    "bucket": "dictation-audio",
+    "endpoint": "https://storage.yandexcloud.net",
+    "syncFolder": "C:\\Users\\sevis\\Downloads\\DictationProject\\output\\site"
+  }
+}
