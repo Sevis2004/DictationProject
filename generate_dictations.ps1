@@ -183,13 +183,28 @@ function Parse-Dictations {
         $heading = $null
         $bodyText = ($bodyLines -join "`n").Trim()
 
-        if ($bodyText -match '(?m)^#\s+(.+?)\s*$') {
-            $heading = $matches[1].Trim()
-            $bodyText = [regex]::Replace($bodyText, '(?m)^#\s+.+?\s*(\r?\n)?', '', 1).Trim()
+        $bodyText = $bodyText -replace "`r`n", "`n"
+        $bodyLines2 = New-Object System.Collections.Generic.List[string]
+
+        foreach ($line in ($bodyText -split "`n")) {
+            $bodyLines2.Add($line)
         }
 
+        while ($bodyLines2.Count -gt 0 -and [string]::IsNullOrWhiteSpace($bodyLines2[0])) {
+            $bodyLines2.RemoveAt(0)
+        }
+
+        if ($bodyLines2.Count -gt 0 -and $bodyLines2[0] -match '^\s*#\s+(.+?)\s*$') {
+            $heading = $matches[1].Trim()
+            $bodyLines2.RemoveAt(0)
+        }
+
+        $bodyText = (($bodyLines2 | ForEach-Object { $_.TrimEnd() }) -join "`n").Trim()
+
         $paragraphs = @(
-            ($bodyText -split '(\r?\n\s*\r?\n)+' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+            $bodyText -split '(\n\s*\n)+' |
+            ForEach-Object { $_.Trim() } |
+            Where-Object { $_ }
         )
 
         if (-not $meta.ContainsKey('title')) { throw 'Each dictation must contain title:' }

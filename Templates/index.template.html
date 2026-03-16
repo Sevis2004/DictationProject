@@ -55,6 +55,7 @@
         container.innerHTML = items.map(item => `
           <div class="dictation">
             <h2>${item.title}</h2>
+	    <h2>Диктант № {{index}} — {{title}}</h2>
             <audio controls preload="none">
               <source src="${item.audio}" type="audio/mpeg">
               Ваш браузер не поддерживает воспроизведение аудио.
