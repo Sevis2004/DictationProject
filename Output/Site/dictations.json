@@ -33,5 +33,25 @@
         "title":  "КОНТРОЛЬНЫЙ ДИКТАНТ ПО ТЕМЕ \"ИМЯ СУЩЕСТВИТЕЛЬНОЕ\"",
         "slug":  "control-imya-sucsh",
         "audio":  "control-imya-sucsh_full.mp3"
+    },
+    {
+        "title":  "ИТОГОВЫЙ ДИКТАНТ ЗА 2 ЧЕТВЕРТЬ ПО ТЕМЕ \"ИМЯ ПРИЛАГАТЕЛЬНОЕ\"",
+        "slug":  "control-imya-pril",
+        "audio":  "control-imya-pril_full.mp3"
+    },
+    {
+        "title":  "КОНТРОЛЬНЫЙ ДИКТАНТ ПО ТЕМЕ \"ИМЯ ПРИЛАГАТЕЛЬНОЕ\" (№2)",
+        "slug":  "control-imya-pril-2",
+        "audio":  "control-imya-pril-2_full.mp3"
+    },
+    {
+        "title":  "КОНТРОЛЬНЫЙ ДИКТАНТ ПО ТЕМЕ \"ИМЯ ЧИСЛИТЕЛЬНОЕ\"",
+        "slug":  "control-imya-chisl",
+        "audio":  "control-imya-chisl_full.mp3"
+    },
+    {
+        "title":  "ИТОГОВЫЙ ДИКТАНТ ЗА 3 ЧЕТВЕРТЬ ПО ТЕМЕ \"МЕСТОИМЕНИЕ\"",
+        "slug":  "control-mest",
+        "audio":  "control-mest_full.mp3"
     }
 ]
