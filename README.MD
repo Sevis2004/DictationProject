@@ -32,7 +32,7 @@ It was designed as an automated pipeline to convert structured text into ready-t
 
 \---
 
-\---
+
 
 \## Setup
 
@@ -47,7 +47,7 @@ To run the project:
 
 Alternatively, see the live demo above for example output.
 
-\---
+
 
 \## Tech Stack
 
@@ -58,7 +58,7 @@ Alternatively, see the live demo above for example output.
 \- ffmpeg (audio processing)
 
 
-## Architecture 
+\## Architecture 
 
 generate_dictations.ps1 — general script
 - `test_split.ps1 — test splitting sentenses (legacy vs improved)`
