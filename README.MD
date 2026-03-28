@@ -1,0 +1,126 @@
+\# Text-to-Speech Dictation Generator
+
+
+
+\## Overview
+
+This project generates high-quality audio dictations (MP3) from text using a Text-to-Speech (TTS) engine.
+
+
+
+It was designed as an automated pipeline to convert structured text into ready-to-use audio files with natural pauses and formatting.
+
+
+
+\---
+
+
+
+\## Key Features
+
+\- Convert text into speech (MP3)
+
+\- Automatic pause handling for dictation-style audio
+
+\- Batch processing of multiple texts
+
+\- Clean output ready for publishing
+
+\- Optional HTML generation for playback
+
+
+
+\---
+
+
+
+\## Tech Stack
+
+\- PowerShell (main pipeline)
+
+\- Yandex SpeechKit TTS
+
+\- ffmpeg (audio processing)
+
+
+
+\---
+
+
+
+\## Demo
+
+Example output:
+
+\- Generated MP3 file (see repository)
+
+\- Example HTML playback page
+
+
+
+\---
+
+
+
+\## How It Works
+
+1\. Input text is structured and split into segments
+
+2\. Each segment is sent to TTS API
+
+3\. Audio parts are generated and processed
+
+4\. Final MP3 is assembled using ffmpeg
+
+5\. (Optional) Files are prepared for publishing
+
+
+
+\---
+
+
+
+\## Configuration
+
+\- Requires API access to a TTS provider (Yandex SpeechKit used by default)
+
+\- Can be adapted to other TTS services
+
+
+
+\---
+
+
+
+\## Notes
+
+\- Yandex TTS is a paid service (free credits may apply)
+
+\- The architecture allows replacing TTS provider if needed
+
+
+
+\---
+
+
+
+\## Use Cases
+
+\- Educational content
+
+\- Language learning materials
+
+\- Automated voice content generation
+
+\- Dictation systems
+
+
+
+\---
+
+
+
+\## Author
+
+Automation / scripting project focused on real-world workflow optimization.
+
