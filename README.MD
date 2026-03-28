@@ -48,6 +48,7 @@ To run the project:
 Alternatively, see the live demo above for example output.
 
 
+\---
 
 
 
@@ -58,6 +59,9 @@ Alternatively, see the live demo above for example output.
 \- Yandex SpeechKit TTS
 
 \- ffmpeg (audio processing)
+
+
+\---
 
 
 \## Architecture 
